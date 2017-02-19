@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href="index.css" rel="stylesheet" type="text/css">
+	 <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	 <script type="text/javascript" src="js/lib/greensock/TweenMax.min.js"></script>
+　　　<script type="text/javascript" src="js/lib/velocity.min.js"></script>
+　　　<script type="text/javascript" src="scrollmagic/uncompressed/ScrollMagic.js"></script>
+　　　<script type="text/javascript" src="scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+	 <script type="text/javascript" src="scrollmagic/uncompressed/plugins/animation.velocity.js"></script>
+	 <script type="text/javascript" src="scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+	<title>Titlee</title>
+<script type="text/javascript">
+	var controller = new ScrollMagic.Controller({
+			globalSceneOptions: {
+				triggerHook: 'onLeave'
+			}
+		});
+</script>
+</head>
+<body>
+	<div id="titletop">
+		<h1 id="SiteTitle">SNS（仮）</h1>
+		<div id="account">
+			<div id="id">
+			<label>ID</label><br>
+			<input type="text" class="formtext" name="id" id="idin">
+			</div>
+			<div id="pass">
+			<label>Password</label><br>
+			<input type="password" class="formtext" name="pass" id="password">
+			</div>
+		<div id="logbutton">
+			<input type="button" id="login" value="ログイン"><br>
+		</div>
+			<a href="Shinki.html" id="sinki">新規登録はここから</a>
+		</div>
+	</div>
+<script>
+$(function(){
+	$('#login').click(function(){
+		// alert('');
+ 		$.ajax({
+			async: false,
+			url: 'http://localhost:8124',
+			type: 'post',
+			data:{"id": $('#idin').val(),
+				  "pass": $('#password').val()},
+			dataType: 'json'
+}).done(function(res){
+	console.debug(res)
+	console.debug(res.id);
+	console.debug(res.pass);
+}).fail(function(xhr, status, error){
+	alert(status);
+});
+
+  			});
+		});                
+</script>
+<div id="trigger1"></div>
+<div class="titlesecond">
+<h2>人々との繋がりを大事に</h2>
+</div>
+<script>
+
+ var secne = new ScrollMagic.Scene({triggerElement:"#trigger1"})
+ 					.setTween(TweenMax.to(".titlesecond" , 1 ,{opacity: 1}))
+ 					.addIndicators()
+ 					.addTo(controller);
+</script>
+</body>
+</html>

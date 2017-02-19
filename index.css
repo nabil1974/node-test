@@ -1,0 +1,93 @@
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+#titletop{
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: url(image/title.jpg);
+	padding-top: 60px;
+	margin-top: -60px;
+}
+
+h1{
+	font-size: 100px;
+	font-family: "Josefin Slab", serif;
+	position: absolute;
+	top: 50%;
+	margin-top: -80px;
+	left: 15%;
+
+}
+
+#account{
+	/*display: inline-block;*/
+	width: 300px;
+	height: 300px;
+	background-color: rgba(255,255,255,0.8);
+	position:absolute;
+	top: 50%;
+	margin-top: -150px;
+	right: 15%;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#pass{
+	margin-top:20px;
+}
+
+label{
+	font-size: 20px;
+}
+
+.formtext{
+	width: 200px;
+	top:0px;
+}
+
+#logbutton{
+	margin-top: 20px;
+}
+
+#login{
+	width: 100px;
+	height: 40px;
+	background-color: #27DE97;
+	color: #FFF;
+}
+
+#sinki{
+	font-size: 12px;
+	margin-left: 90px;
+	color:#1A64FC;
+}
+
+#login:hover{
+	background-color: #1B48F0;
+	cursor: pointer;
+}
+
+.titlesecond{
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image:url(image/titlesecond.jpg);
+	opacity: 0;
+	padding-top: 60px;
+}
+h2{
+	text-align: center;
+}
